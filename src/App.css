@@ -1,38 +1,256 @@
-.App {
-  text-align: center;
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292828;
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 1px;
+  height: 10vh;
+}
+
+.company-logo-container{
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 20%;
+
+}
+
+.company-name-h2{
+  font-size: 24px;
+}
+
+.company-name-span{
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.c-logo{
+  width: 150px;
+  height: 50px;
+}
+
+.search-cont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+
+  height: 30px;
+
+}
+
+.mag-input-cont{
+
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #373737;
+}
+
+.mag-cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+}
+
+.glass{
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #949393;
+}
+
+.input{
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.search-btn{
+  background-color: transparent;
+  border: 1px solid #949393;
+  color: #949393;
+  width: 130px;
+  height: 34px;
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.search-btn:active{
+  transform: translateY(4px);
+}
+
+.nav-opt-cont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-icons{
+  width: 30px;
+  height: 30px;
+}
+
+.profile-pic{
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+/* Display Books */
+
+.books-cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.each-book{
+  margin: 15px;
+  cursor: pointer;
+  width : 150px;
+  height: 220px;
+}
+
+.whole-bg{
+  background-color: #242121;
+  padding: 20px;
+}
+
+.heading{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.no-book-msg{
+  color: white;
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* each book */
+
+.details-container{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-right: 15px;
+  margin-top: 15px;
+}
+
+.clicked-book{
+  width: 250px;
+  height: 320px;
+  transform: rotate(-10deg) translateX(35px);
+  margin-top: 10px;
+  
+}
+
+.clicked-book-details{
+  width: 100%;
+  margin-left: 15px;
+  background-color: #415F71;
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+}
+
+.title-date-cont{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.each-book-title{
+  font-size: 37px;
+  font-weight: 500;
+}
+
+.each-book-publishedon{
+  color: #A0AFB8;
+  font-size: 15px;
+}
+
+.each-book-auth{
+  color: #A0AFB8;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.each-book-des{
+  color: #A0AFB8;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.each-book-more-opt-cont{
+
+  margin-top: 10px;
+}
+
+.each-book-span{
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.each-book-count{
+  color: lightgray;
+}
+
+.right-align{
+  text-align: right;
+}
+
+.each-book-btn{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  width: 120px;
+  height: 30px;
+  margin-right: 10px;
+  outline: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.each-book-btn:active{
+  transform: translateY(4px);
 }

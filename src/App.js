@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import ReactDOM from "react-dom";
+import Navbar from "./Components/Navbar";
+import DisplayBooks from "./Components/DisplayBooks";
+import SearchResults from "./Components/SearchResults";
+import BookDetails from "./Components/BookDetails";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+const App = () => {
+  const [resultForSearch, setResultForSearch] = useState([]);
+  const [clickedBook, setClickedBook] = useState(null);
+
+  console.log("result for search ", resultForSearch);
+
+
+  return(
+    <div>
+      
+        <Navbar setResultForSearch = {setResultForSearch} setClickedBook = {setClickedBook}/>
+        {
+          clickedBook !== null ? <BookDetails clickedBook = {clickedBook}/> : ""
+        }
+
+
+        {
+          resultForSearch.length > 0? <SearchResults resultForSearch = {resultForSearch} setClickedBook = {setClickedBook}/> :  ""
+        }
+        <DisplayBooks setClickedBook = {setClickedBook}/>
+        
     </div>
-  );
+  )
 }
 
 export default App;
